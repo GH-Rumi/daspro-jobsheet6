@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Pemilihan2Percobaan211 {
     public static void main(String[] args) {
         Scanner input11 = new Scanner(System.in);
-        String menu, member;
+        String menu, member, pembayaran;
         int jumlahBeli, pilihan_menu;
         double diskon, harga, totalBayar;
 
@@ -16,10 +16,11 @@ public class Pemilihan2Percobaan211 {
         System.out.println("masukkan angka dari menu yang dipilih = ");
         pilihan_menu = input11.nextInt();
         input11.nextLine();
+        
         System.out.print("Apakah punya member (y/n) ? = ");
         member = input11.nextLine();
         System.out.println("-------------------------------------");
-
+        
         if (member.equalsIgnoreCase("y")) {//Menggunakan equalsIgnoreCase untuk membandingkan string
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
@@ -34,19 +35,27 @@ public class Pemilihan2Percobaan211 {
             } else if (pilihan_menu == 3) {
                 harga = 15000;
                 System.out.println("harga bundling = " + harga);
-
+                
             } else {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return; // Menghentikan eksekusi lebih lanjut jika pilihan salah
             }
+            System.out.println("Pilih pembayaran (cash/qris)");
+            pembayaran = input11.nextLine();
 
+            if (pembayaran.equalsIgnoreCase("qris")) {
+                harga -= 1000;
+                
+            } else {
+                System.out.println("Oke mas");
+            }
+            
             // Menghitung total bayar setelah diskon
             totalBayar = harga - (harga * diskon);
             System.out.println("Total bayar setelah diskon = " + totalBayar);
 
-            
         }
-
+        
         else if (member.equalsIgnoreCase("n")) { //Menggunakan equalsIgnoreCase untuk membandingkan string
             if (pilihan_menu == 1) {
                 harga = 14000;
@@ -59,15 +68,25 @@ public class Pemilihan2Percobaan211 {
             } else if (pilihan_menu == 3) {
                 harga = 15000;
                 System.out.println("harga bundling = " + harga);
-
+                
             } else {
                 System.out.println("Masukkan pilihan menu dengan benar");
-                return; // Menghentikan eksekusi lebih lanjut jika pilihan salah
+                return;
+
             }
-            //Menghitung total bayar
-            System.out.println("Total bayar = " + harga);    
-            
-            
+
+            System.out.println("Pilih pembayaran (cash/qris)");
+            pembayaran = input11.nextLine();
+                
+                if (pembayaran.equalsIgnoreCase("qris")) {
+                    harga -= 1000;
+                    
+                } else {
+                    System.out.println("Oke mas");
+                }
+                //Menghitung total bayar
+                System.out.println("Total bayar = " + harga);    
+                
         } else {
             System.out.println("Member tidak valid");
         }
