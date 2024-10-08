@@ -7,7 +7,7 @@ public class tugas311new {
 
         System.out.println("Masukkan Merk Sepatu (Specs/910/Ortus): ");
         merk = input11.nextLine();
-        System.out.println("Masukkan kategori sepatu: ");
+        System.out.println("Masukkan kategori sepatu (Slip On/High Top / Woman/Man / Kids/Adult): ");
         kategori = input11.nextLine();
         System.out.println("Masukkan ukuran sepatu: ");
         ukuran = input11.nextInt();
