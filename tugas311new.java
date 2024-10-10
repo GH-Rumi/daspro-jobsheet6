@@ -9,7 +9,7 @@ public class tugas311new {
         merk = input11.nextLine();
         System.out.println("Masukkan kategori sepatu (Slip On/High Top / Woman/Man / Kids/Adult): ");
         kategori = input11.nextLine();
-        System.out.println("Masukkan ukuran sepatu: ");
+        System.out.println("Masukkan ukuran sepatu : ");
         ukuran = input11.nextInt();
 
         if (merk.equalsIgnoreCase("Specs") && kategori.equalsIgnoreCase("Slip On")) {
